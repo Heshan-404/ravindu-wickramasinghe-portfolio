@@ -48,34 +48,34 @@
   height: 20px;
   width: auto;
   animation-name: socialIconAnimation;
-  animation-duration: 1000ms;
+  animation-duration: 500ms;
   animation-fill-mode: forwards;
-  opacity: 0;
+  opacity: 0; 
 }
-.social-icon:hover { 
+.social-icon:hover {
   color: #00d8ff;
 }
 
 @keyframes socialIconAnimation {
   0% {
     color: #00d8ff;
-    transform: translate(0px, 100px);
-    -webkit-transform: translate(0px, 100px);
-    -moz-transform: translate(0px, 100px);
-    -ms-transform: translate(0px, 100px);
-    -o-transform: translate(0px, 100px);
-  }
+    transform: translate(0px, 130px);
+    -webkit-transform: translate(0px, 130px);
+    -moz-transform: translate(0px, 130px);
+    -ms-transform: translate(0px, 130px);
+    -o-transform: translate(0px, 130px);
+}
   65% {
     color: #00d8ff;
   }
   100% {
-    transform: translate(0px, -0px);
-    -webkit-transform: translate(0px, -0px);
-    -moz-transform: translate(0px, -0px);
-    -ms-transform: translate(0px, -0px);
-    -o-transform: translate(0px, -0px);
+    transform: translate(0px, -80px);
+    -webkit-transform: translate(0px, -80px);
+    -moz-transform: translate(0px, -80px);
+    -ms-transform: translate(0px, -80px);
+    -o-transform: translate(0px, -80px);
     opacity: 1;
-  }
+}
 }
 .social-icon-1 {
   animation-delay: 200ms;
@@ -100,7 +100,7 @@
 .social-icon-6 {
   animation-delay: 1200ms;
 }
- 
+
 @keyframes headerBtnHoverAnimation {
   0% {
   }
@@ -136,6 +136,13 @@
   }
   .navbar-contact {
     display: flex;
+  }
+  .social-icon {
+    transform: translate(0px, 120px);
+    -webkit-transform: translate(0px, 120px);
+    -moz-transform: translate(0px, 120px);
+    -ms-transform: translate(0px, 120px);
+    -o-transform: translate(0px, 120px);
   }
 }
 
