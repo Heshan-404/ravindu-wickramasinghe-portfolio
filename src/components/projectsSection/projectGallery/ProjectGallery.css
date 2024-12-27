@@ -1,0 +1,22 @@
+/* ProjectGallery.css */
+.project-gallery-container {
+    /* You can add any container specific styling here if needed */
+    width: 100%; /* Or any desired width */
+  }
+  
+  .gallery-item-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two equal width columns */
+    gap: 0px; /* Adjust the gap between items if needed */
+  }
+  
+  .gallery-item {
+    position: relative;
+    overflow: hidden; /* To contain the image */
+  }
+  
+  .gallery-item-image {
+    display: block;
+    width: 100%;
+    height: auto; /* Let the height adjust based on the width to maintain aspect ratio */
+  }

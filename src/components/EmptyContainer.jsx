@@ -8,4 +8,4 @@ function EmptyContainer(props) {
   )
 }
 
-export default EmptyContainer
+export default EmptyContainer;

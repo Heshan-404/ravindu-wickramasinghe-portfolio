@@ -32,8 +32,8 @@ function Header() {
           <span className="navbar-toggler-icon "></span>
         </button>
         <div className="collapse navbar-collapse " id="navbarNavAltMarkup">
-          <div className="navbar-nav ">
-            <a className="nav-item  active  " href="#">
+          <div className="navbar-nav d-flex align-items-center">
+            <a className="nav-item   " href="#">
               START
             </a>
             <a className="nav-item " href="#">
@@ -48,24 +48,42 @@ function Header() {
             <div className="navbar-contact justify-content-center align-items-end">
               <div className="d-flex justify-content-between w-50">
                 <div className="social-icon-btn">
-                  <FontAwesomeIcon icon={faFacebook} className="social-icon social-icon-1" />
+                  <FontAwesomeIcon
+                    icon={faFacebook}
+                    className="social-icon social-icon-1"
+                  />
                 </div>
                 <div className="social-icon-btn">
-                  <FontAwesomeIcon icon={faBehance} className="social-icon social-icon-2" />
+                  <FontAwesomeIcon
+                    icon={faBehance}
+                    className="social-icon social-icon-2"
+                  />
                 </div>
                 <div className="social-icon-btn">
-                  <FontAwesomeIcon icon={faLinkedin} className="social-icon social-icon-3" />
+                  <FontAwesomeIcon
+                    icon={faLinkedin}
+                    className="social-icon social-icon-3"
+                  />
                 </div>
                 <div className="social-icon-btn">
-                  <FontAwesomeIcon icon={faInstagram} className="social-icon social-icon-4" />
+                  <FontAwesomeIcon
+                    icon={faInstagram}
+                    className="social-icon social-icon-4"
+                  />
                 </div>
                 <div className="social-icon-btn">
-                  <FontAwesomeIcon icon={faPinterest} className="social-icon social-icon-5" />
-                </div>  
+                  <FontAwesomeIcon
+                    icon={faPinterest}
+                    className="social-icon social-icon-5"
+                  />
+                </div>
                 <div className="social-icon-btn">
-                  <FontAwesomeIcon icon={faPrint} className="social-icon social-icon-6" />
-                </div> 
-                  </div>
+                  <FontAwesomeIcon
+                    icon={faPrint}
+                    className="social-icon social-icon-6"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

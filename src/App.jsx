@@ -1,16 +1,31 @@
-import React, { useRef, useEffect, useState, useCallback } from 'react';
-import FirstSection from './components/firstSection/FirstSection';
-import Header from './components/header/Header';
-import SecondSection from './components/secondSection/SecondSection';
-import AboutSection from './components/aboutSection/AboutSection';
+import React, { useRef, useEffect, useState, useCallback } from "react";
+import FirstSection from "./components/firstSection/FirstSection";
+import Header from "./components/header/Header";
+import SecondSection from "./components/secondSection/SecondSection";
+import AboutSection from "./components/aboutSection/AboutSection";
+import ProjectLanding from "./components/projectsSection/projectLanding/ProjectLanding";
+import ProjectsMenu from "./components/projectsSection/projectsMenu/ProjectsMenu";
 
 const App = () => {
+  
   const headerRef = useRef(null);
   const firstSectionRef = useRef(null);
   const secondSectionRef = useRef(null);
-  const aboutSectionRef = useRef(null); // Add ref for AboutSection
+  const aboutSectionRef = useRef(null);
+  const projectLandingRef = useRef(null);
+  const projectsMenuRef = useRef(null);
+  const projectGalleryRef = useRef(null);
 
-  const sections = [headerRef, firstSectionRef, secondSectionRef, aboutSectionRef]; // Include aboutSectionRef
+  const sections = [
+    headerRef,
+    firstSectionRef,
+    secondSectionRef,
+    aboutSectionRef,
+    projectLandingRef,
+    projectsMenuRef,
+    projectGalleryRef,
+  ];
+
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
   const touchStart = useRef(0);
@@ -29,7 +44,7 @@ const App = () => {
         setIsScrolling(true);
         window.scrollTo({
           top: sections[index].current.offsetTop,
-          behavior: 'smooth',
+          behavior: "smooth",
         });
         setCurrentSectionIndex(index);
         setTimeout(() => setIsScrolling(false), 700); // Adjust duration as needed
@@ -81,14 +96,14 @@ const App = () => {
   );
 
   useEffect(() => {
-    window.addEventListener('wheel', handleWheel, { passive: false });
-    window.addEventListener('touchstart', handleTouchStart, { passive: true });
-    window.addEventListener('touchend', handleTouchEnd, { passive: false });
+    window.addEventListener("wheel", handleWheel, { passive: false });
+    window.addEventListener("touchstart", handleTouchStart, { passive: true });
+    window.addEventListener("touchend", handleTouchEnd, { passive: false });
 
     return () => {
-      window.removeEventListener('wheel', handleWheel);
-      window.removeEventListener('touchstart', handleTouchStart);
-      window.removeEventListener('touchend', handleTouchEnd);
+      window.removeEventListener("wheel", handleWheel);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchend", handleTouchEnd);
     };
   }, [handleWheel, handleTouchStart, handleTouchEnd]);
 
@@ -103,9 +118,26 @@ const App = () => {
       <div ref={secondSectionRef}>
         <SecondSection />
       </div>
-      <div ref={aboutSectionRef}> {/* Add the ref to the AboutSection component */}
+      <div ref={aboutSectionRef}>
         <AboutSection />
       </div>
+      <div ref={projectLandingRef}>
+        <ProjectLanding name={"PROJECTS"} ismain={true} />
+      </div>
+      <div ref={projectsMenuRef}>
+        <ProjectsMenu />
+      </div>
+      <ProjectLanding name={"LOGO DESIGN"} ismain={false} />
+      <ProjectLanding name={"T-SHIRT DESIGN"} ismain={false} />
+      <ProjectLanding name={"SOCIAL MEDIA"} ismain={false} />
+      <ProjectLanding name={"POSTER DESIGN"} ismain={false} />
+      <ProjectLanding name={"COVER PAGE"} ismain={false} />
+      <ProjectLanding name={"BRAND IDENTITY"} ismain={false} />
+      <ProjectLanding name={"3D DESIGN"} ismain={false} />
+      <ProjectLanding name={"OTHER DESIGN"} ismain={false} />
+      {/* <div ref={projectGalleryRef}>
+        <ProjectGallery />
+      </div> */}
     </div>
   );
 };
